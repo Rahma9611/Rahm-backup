@@ -1,0 +1,65 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFF7E5;
+  color: #333;
+}
+
+h1 {
+  color: #FF6347;
+}
+
+/* Links */
+a {
+  color: #8B4513;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF4500;
+  text-decoration: underline;
+}
+
+/* Child Selector */
+ul > li {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Siblings Selector */
+h1, p {
+  background-color: #FFDAB9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Hover Pseudo-class */
+ul li:hover {
+  color: #FF1493;
+}
+
+/* nth-child */
+ul li:nth-child(3) {
+  background-color: #FFE4B5;
+  padding: 5px;
+}
+
+/* not selector */
+p:not(:first-of-type) {
+  text-decoration: underline;
+}
+
+/* before */
+ul li::before {
+  content: "🍽️ ";
+}
+
+/* after */
+a::after {
+  content: " 🍕";
+}
+
+/* first letter */
+p::first-letter {
+  font-size: 200%;
+  color: #FF4500;
+}

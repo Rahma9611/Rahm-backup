@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>convert</title>
+    </head>
+    <body>
+        <h2>The JavaScript String() Method</h2>
+
+        <p>The string() method can convert a number to a string.</p>
+
+        <p id="number_result"></p>
+        <p id="string_result"></p>
+
+        <script>
+            var x = 70;
+            var y = 50;
+            document.getElementById("number_result").innerHTML = x+y;
+
+            // Does not add beacuse it is a string it concatenates
+            document.getElementById("string_result").innerHTML=String(x) + String(y);
+        </script>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>real-time form validation</title>
+
+        <link rel="stylesheet" href="style.css"
+    </head>
+    <body>
+        <h1>REAL TIME VALIDATION USING JS</h1>
+        <hr>
+            <form id="loginForm" onsubmit="validate(event)">
+                <!--Fieldset groups related elements in a form -->
+                <fieldset>
+
+                    <!--Email input feild -->
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <!--Password input feild with a minimum lenght requirement -->
+                    <div>
+                        <label for="password">Password:</label>
+                        <!-- minlenght attribute ensures the passwords is at least 8 characters long-->
+                        <input type="password" id="password" name="password" minlenght="8">
+                    </div>
+
+                    <!--Age input feild with minimum and maximum value requirements -->
+                    <div>
+                        <label for="age">Age:</label>
+                        <!--min and max attributes define the acceptable range of ages -->
+                        <input type="number" id="age" name="age" min="12" max="50">
+
+                    <!--Submit button for the form -->
+                    <button type="submit">Login</button>
+                    
+                </fieldset>
+            </form>
+
+            <!--Div for displaying validation messages -->
+            <div id="message"></div>
+
+            <!--Link to the external JavaScript file-->
+            <script src="script-vaild.js"></script>
+
+    </body>
+</html>

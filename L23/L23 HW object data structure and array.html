@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>homework</title>
+    </head>
+    <body>
+        <h2>JavaScript Arrays</h2>
+
+        <p id="fried rice"></p>
+        <p id="dosa"></p>
+        <p id="alfredo pasta"></p>
+        <p id="pizza"></p>
+        <p id="chicken"></p>
+
+        <script>
+            var food= ["fried rice", "dosa", "alfredo pasta", "pizza", "chicken"];
+
+            document.getElementById("myjoin").innerHTML = food.join(" * ");
+            document.getElementById("original").innerHTML = food;
+
+            food.pop();
+            document.getElementById("mypop").innerHTML = food;
+        </script>
+    </body>
+</html>
