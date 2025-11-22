@@ -20,7 +20,7 @@ function printOutput(num){
 }
 
 function getFormattedNumber(num){
-    if(num==""){
+    if(num=="-"){
         return "";
     }
     var n = Number(num);
@@ -53,20 +53,20 @@ for(var i=0;i<operator.length;i++){
             var output=getOutput();
             var history=getHistory();
             if(output==""&&history!=""){
-                if(isNaN(history[history.lenght-1])){
+                if(isNaN(history[history.length-1])){
                     history= history.substring(0,history.length-1);
                 }
             }
             if (output!="" || history!=""){
                 output= output==""?output:reverseNumberFormat(output);
-                history=history+output;
+                history= history + output;
                 if(this.id=="="){
                     var result=eval(history);
                     printOutput(result);
                     printHistory("");
                 }
                 else{
-                    history=history=this.id;
+                    history=history + this.id;
                     printHistory(history);
                     printOutput("");
                 }
@@ -76,11 +76,11 @@ for(var i=0;i<operator.length;i++){
 }
 
 var number = document.getElementsByClassName("number");
-for(var i=0;i<number.lenght;i++){
+for(var i=0;i<number.length;i++){
     number[i].addEventListener('click', function(){
         var output=reverseNumberFormat(getOutput());
         if(output !=NaN){ //if output is a number
-            out=output+this.id;
+            output = output + this.id;
         printOutput(output)
     }
     })
