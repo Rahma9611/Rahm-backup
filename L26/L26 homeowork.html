@@ -6,32 +6,38 @@
         <title>homework</title>
     </head>
     <body>
-        <p id="student1"></p>
-        <p id="student2"></p>
+        <h2>JavaScript Class Inheritance</h2>
+
+        <p id="details"></p>
+        <p id="greetings"></p>
 
         <script>
-            // creating a class
-            class student {
-                constructor(nm, y) {
-                    this.name = nm;
-                    this.year = y;
+            class Student {
+                constructor(name) {
+                    this.studentName = name;
                 }
 
-                // creating age method for class student
-                age(){
-                    let date = new Date();
-                    return date.getFullYear() - this.year;
+                present() {
+                    return "Hello, my name is " + this.studentName;
                 }
             }
 
-            // use student class with two objects
-            student1 = new student("Rahma", 2011);
-            document.getElementById("student1").innerHTML =
-            "My name is " + student1.name + ". I born in " + student1.year + ". And my age is " + student1.age();
+            class Grade extends Student {
+                constructor(name, grade) {
+                    super(name);
+                    this.studentGrade = grade;
+                }
 
-            student2 = new student("Rida", 2014);
-            document.getElementById("student2").innerHTML =
-            "My name is " + student2.name + ". I born in " + student2.year + ". And my age is " + student2.age();
+                show() {
+                    return this.present() + ', ' + 'I am in grade ' + this.studentGrade;
+                }
+            }
+
+            let myStudent = new Grade("Tina", "grade 6");
+            document.getElementById("details").innerHTML = myStudent.show();
+            
+            // hello() is a static method cannot be accessed by object
+            document.getElementById("greetings").innerHTML = Student.hello();
         </script>
     </body>
 </html>
