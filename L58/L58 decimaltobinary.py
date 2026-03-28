@@ -1,15 +1,9 @@
-from unicodedata import decimal
+num = 56
+binary = ""
 
+while num > 0:
+    remainder = num % 2
+    binary = str(remainder) + binary
+    num = num // 2
 
-def DecimalToBinary(decimal):
-    binary = ""
-
-    while decimal > 0:
-        rem = decimal % 2
-        binary = str(rem) + binary
-        decimal = decimal//2
-
-    print("Binary number is:", binary)
-    decimal = int(input("Enter a decimal number: "))
-    
-DecimalToBinary(decimal)
+print(binary)
