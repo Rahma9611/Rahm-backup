@@ -10,7 +10,7 @@ CREATE TABLE supplier (
 INSERT INTO supplier(SupNum, SupName, SupStatus, SupCity) VALUES
 ("S01", "Jonathan", 20, "Jakarta"),
 ("S02", "Andrew", 10, "Surabaya"),
-("S03", "Jessia", 15 "New York"),
+("S03", "Jessia", 15, "New York"),
 ("S04", "Jack", 30, "Lagos"),
 ("S05", "Amber", 10, "London");
 
