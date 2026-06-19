@@ -23,15 +23,15 @@ CREATE TABLE IF NOT EXISTS Cust (
 );
 
 INSERT INTO Cust (customer_id, cust_name, city, grade, Salesperson_id) VALUES
-    ("C1001" "Jay Idzes", "New York", 100, "7004"),
-    ("C1002" "Justin Hubner", "London", 300, "7003"),
-    ("C1003" "Sandy Walsh", "Moscow", 200, "7006"),
-    ("C1004" "Garaga", "Paris", NULL, "7002"),
-    ("C1005" "Zoe Saldana", "California", 200, "7004"),
-    ("C1006" "Jowel Toyyib", "London", NULL, "7003"),
-    ("C1007" "Bradd Pitt", "Copenhagen", 100, "7005"),
-    ("C1008" "Andrew Smith", "London", 100, "7003"),
-    ("C1009" "Ragnar Oeratmangoe", "Berlin", 100, "7001");
+    ("C1001", "Jay Idzes", "New York", 100, "7004"),
+    ("C1002", "Justin Hubner", "London", 300, "7003"),
+    ("C1003", "Sandy Walsh", "Moscow", 200, "7006"),
+    ("C1004", "Garaga", "Paris", NULL, "7002"),
+    ("C1005", "Zoe Saldana", "California", 200, "7004"),
+    ("C1006", "Jowel Toyyib", "London", NULL, "7003"),
+    ("C1007", "Bradd Pitt", "Copenhagen", 100, "7005"),
+    ("C1008", "Andrew Smith", "London", 100, "7003"),
+    ("C1009", "Ragnar Oeratmangoe", "Berlin", 100, "7001");
 
 --create the orders table if it does not exist
 CREATE TABLE IF NOT EXISTS MyOrders (
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS MyOrders (
     customer_id TEXT,
     Salesperson_id TEXT,
     FOREIGN KEY (customer_id) REFERENCES Cust(customer_id)
-    FOREIGN KEY (salesperson_id) REFERENCES Salesperson(Salesperon_id)
+    FOREIGN KEY (Salesperson_id) REFERENCES Salesperson(Salesperon_id)
 );
 
 --Insert sample data into the Orders table
